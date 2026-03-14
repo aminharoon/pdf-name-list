@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Name Card Generator</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div class="app">
+      <div class="controls">
+        <input id="nameInput" placeholder="Enter name" />
+        <button id="addBtn">+</button> <button id="clearBtn">Clear</button>
+      </div>
+      <div class="tags" id="tags"></div>
+      <div class="panel">
+        <label>Cards per row</label>
+        <select id="cols">
+          <option>1</option>
+          <option>2</option>
+          <option selected>3</option>
+          <option>4</option>
+        </select>
+
+        <button id="generateBtn">Generate & Download</button>
+      </div>
+
+      <canvas id="canvas"></canvas>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>

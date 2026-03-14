@@ -1,0 +1,94 @@
+body {
+  margin: 0;
+  font-family: Georgia, serif;
+  background: #1a1a24;
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+.app {
+  width: 900px;
+  background: #0e0e12;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+input {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #1a1a24;
+  color: white;
+  font-size: 16px;
+  outline: none;
+}
+
+button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background: #c9a84c;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  opacity: 0.9;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.tag {
+  background: #1a1a24;
+  padding: 8px 12px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tag span {
+  cursor: pointer;
+  color: #c9a84c;
+  font-weight: bold;
+}
+
+.panel {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+select {
+  padding: 8px;
+  border-radius: 6px;
+  background: #1a1a24;
+  color: white;
+  border: none;
+}
+
+canvas {
+  margin-top: 20px;
+  max-width: 100%;
+  border-radius: 10px;
+  background: #0f0f18;
+}
