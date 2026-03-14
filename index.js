@@ -57,27 +57,30 @@ generateBtn.onclick = () => {
     // A4 page dimensions in pixels (at 96 DPI)
     const pageW = 595;
     const pageH = 842;
-    const margin = 20;
-    const lineHeight = 30;
+    const scale = 3; // Render at 3x resolution for clarity
+    const scaledPageW = pageW * scale;
+    const scaledPageH = pageH * scale;
+    const margin = 20 * scale;
+    const lineHeight = 30 * scale;
 
-    // Set canvas to A4 dimensions
-    canvas.width = pageW;
-    canvas.height = pageH;
+    // Set canvas to scaled A4 dimensions
+    canvas.width = scaledPageW;
+    canvas.height = scaledPageH;
     canvas.style.width = pageW + "px";
     canvas.style.height = pageH + "px";
 
     ctx.fillStyle = "white";
-    ctx.fillRect(0, 0, pageW, pageH);
+    ctx.fillRect(0, 0, scaledPageW, scaledPageH);
 
     // Draw names vertically
     let y = margin;
     for (let i = 0; i < names.length; i++) {
-        if (y + lineHeight > pageH - margin) break; // Stop if no more space
+        if (y + lineHeight > scaledPageH - margin) break; // Stop if no more space
         ctx.fillStyle = "#333";
-        ctx.font = "bold 14px Georgia";
+        ctx.font = "bold " + (14 * scale) + "px Georgia";
         ctx.textAlign = "left";
         ctx.textBaseline = "top";
-        ctx.fillText(names[i], margin, y);
+        ctx.fillText((i + 1) + ". " + names[i], margin, y);
         y += lineHeight;
     }
 
